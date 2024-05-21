@@ -18,15 +18,14 @@ namespace CsvToSqlETL
         {
             // Load configuration
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables();
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             IConfiguration configuration = builder.Build();
 
             connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            string csvFilePath = configuration["CsvFilePath"];
-            string duplicatesFilePath = configuration["DuplicatesFilePath"];
+            string csvFilePath = Path.Combine(AppContext.BaseDirectory, "sample-cab-data.csv");
+            string duplicatesFilePath = Path.Combine(AppContext.BaseDirectory, "duplicates.csv");
 
             DataTable dataTable = CreateDataTable();
 
