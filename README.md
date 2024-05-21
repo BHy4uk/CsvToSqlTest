@@ -8,7 +8,7 @@ This repository contains scripts and information for setting up and querying the
     ```sql
     CREATE DATABASE TaxiTripsDB;
     ```
-2. **Update appsetting.json file with your DB connection configuration**
+2. **Update appsettings.json file with your DB connection configuration**
 3. **TaxiTrips Table Creation**: Execute the following SQL command to create the `TaxiTrips` table:
     ```sql
     CREATE TABLE TaxiTrips (
