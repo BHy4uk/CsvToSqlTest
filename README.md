@@ -8,8 +8,8 @@ This repository contains scripts and information for setting up and querying the
     ```sql
     CREATE DATABASE TaxiTripsDB;
     ```
-
-2. **TaxiTrips Table Creation**: Execute the following SQL command to create the `TaxiTrips` table:
+2. **Update appsetting.json file with your DB connection configuration**
+3. **TaxiTrips Table Creation**: Execute the following SQL command to create the `TaxiTrips` table:
     ```sql
     CREATE TABLE TaxiTrips (
         tpep_pickup_datetime DATETIME,
@@ -28,6 +28,7 @@ This repository contains scripts and information for setting up and querying the
 
 - **Number of Rows**: 29889
 - **Number of Duplicate Rows**: 111
+- **You can find file with dublicates YourProjectLocation\CsvToSqlTest-master\CsvToSqlTest-master\CsvToSqlTest\bin\Debug\net8.0**
 
 ## Example Queries
 
